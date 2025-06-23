@@ -1,20 +1,6 @@
-var somaFuncao = require("./calculadora"); // importando o arquivo
+var calculadora = require("./calculadora"); //Agora a variavel está recebendo um objeto e não apenas uma unica função;
 
-
-function mult(a,b){
-    return a*b;
-}
-
-function sub(a,b){
-    return a - b ;
-}
-
-function div(a,b){
-    return a/b;
-}
-
-
-console.log(somaFuncao(10,20))
+console.log(calculadora.mult(10,20)) //Logo, para acessar devemos usar o nome do objeto e seu membro (função mult)
 
 
 
