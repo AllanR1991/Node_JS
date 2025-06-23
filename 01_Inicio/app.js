@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+/*
 var mostrarSite = true;
 
 const site= "www.guiadoprogramador.com";
@@ -11,3 +22,4 @@ console.log("E eu estou aprendendo Node.js com o Guia do programador");
 if(mostrarSite){
     console.log(site)
 }
+*/
