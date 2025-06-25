@@ -3,6 +3,10 @@ const express = require("express"); //importando o express para nosso projeto.
 const app = express(); // iniciando o express.
 const porta = 4000
 
+
+console.log("Express version:", require("express/package").version);
+
+
 //Criando rota para evitar a mensagem de "cannot get" ao rodar o servidor, devolvendo uma respopsta para a rota
 app.get("/",function(req, res){
     //Cada rota deve ter apenas uma rota
@@ -13,7 +17,14 @@ app.get("/",function(req, res){
     //res.send("Outra resposta")
 });
 
-app.get("/blog", function (req, res){
+// 
+// Parametro obrigatorio: /:nome_do_parametro
+//  
+//  Paramentro não obrigatorio: /:nome_do_parametro?
+// 
+
+//Abaixo como devemos realizar a criação de uma rota opcional com express na versão 5.
+app.get('/blog{/:artigo}', function (req, res){
     res.send("Bem vindo ao meu blog!");
 })
 
