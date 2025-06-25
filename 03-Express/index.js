@@ -25,7 +25,15 @@ app.get("/",function(req, res){
 
 //Abaixo como devemos realizar a criação de uma rota opcional com express na versão 5.
 app.get('/blog{/:artigo}', function (req, res){
-    res.send("Bem vindo ao meu blog!");
+
+    var artigo = req.params.artigo;
+
+    if(artigo){
+        res.send(`<h2>Artigo: ${artigo}</h2>`)
+    }else{
+        res.send("Bem vindo ao meu blog!");
+    }
+
 })
 
 app.get("/canal/youtube", function(req,res){
