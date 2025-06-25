@@ -7,7 +7,7 @@ const app = express(); // iniciando o express.
 app.get("/",function(req, res){
     //Cada rota deve ter apenas uma rota
         
-    res.send("Bem vindo ao guia do programador")//Resposta da pagina pode ser um arquivo um html entre outros
+    res.send("<h1>Bem vindo ao guia do programador</h1>")//Resposta da pagina pode ser um arquivo um html entre outros
 
     //Após ja ter enviado a respota para rota é como se a conexão estivese sido encerrada não sendo possivel enviar as demais solicitações
     //res.send("Outra resposta")
@@ -28,3 +28,5 @@ app.listen(4000,function(erro){
         console.log("Servidor iniciado com sucesso!")
     }
 })
+
+//Após instalado o nodemon basta rodarmos o nodemon atraves do comando [nodemon "arquivo"] ai o servidor passa a ser recarregado automaticamente.
