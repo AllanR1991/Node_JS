@@ -1,7 +1,7 @@
 const express = require("express"); //importando o express para nosso projeto.
 
 const app = express(); // iniciando o express.
-
+const porta = 4000
 
 //Criando rota para evitar a mensagem de "cannot get" ao rodar o servidor, devolvendo uma respopsta para a rota
 app.get("/",function(req, res){
@@ -21,7 +21,15 @@ app.get("/canal/youtube", function(req,res){
     res.send("<h1>Bem vindo ao meu canal!</h1>");
 })
 
-app.listen(4000,function(erro){
+
+app.get("/ola/:nome/:empresa", function(req,res){
+    // REQ => Dados enviados pelo usuario
+    // RES => Respota que vai se enviada para o usuário
+    var nome = req.params.nome;
+    res.send(`<h1>Oi ${nome}!</h1>`)
+})
+
+app.listen(porta,function(erro){
     if(erro){
         console.log("Ocorreu um erro!")
     }else{
