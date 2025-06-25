@@ -36,8 +36,17 @@ app.get('/blog{/:artigo}', function (req, res){
 
 })
 
+//Trabalhando com query params
+//Query params são totalmente opcionais
 app.get("/canal/youtube", function(req,res){
-    res.send("<h1>Bem vindo ao meu canal!</h1>");
+
+    var canal = req.query["canal"];
+   if(canal){
+       res.send(`<h1>${canal}</h1>`)
+    } else{
+        res.send(`<h1>Bem vindo ao meu canal!</h1>`)
+    }
+    
 })
 
 
