@@ -26,7 +26,8 @@ app.get("/ola/:nome/:empresa", function(req,res){
     // REQ => Dados enviados pelo usuario
     // RES => Respota que vai se enviada para o usuário
     var nome = req.params.nome;
-    res.send(`<h1>Oi ${nome}!</h1>`)
+    var empresa = req.params.empresa;
+    res.send(`<h1>Oi ${nome} do ${empresa}!</h1>`)
 })
 
 app.listen(porta,function(erro){
