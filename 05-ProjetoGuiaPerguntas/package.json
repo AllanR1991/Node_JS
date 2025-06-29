@@ -1,0 +1,20 @@
+{
+  "name": "guiaperguntas",
+  "version": "1.0.0",
+  "description": "Uma plataforma de perguntas e respostas ao estilo Yahoo respostas",
+  "homepage": "https://github.com/AllanR1991/Node_JS#readme",
+  "bugs": {
+    "url": "https://github.com/AllanR1991/Node_JS/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllanR1991/Node_JS.git"
+  },
+  "license": "ISC",
+  "author": "Allan Rodrigues dos Santos",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
