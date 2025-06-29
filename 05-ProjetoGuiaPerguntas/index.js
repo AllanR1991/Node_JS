@@ -8,7 +8,10 @@ const porta = 8080;
 app.set('view engine','ejs')
 
 app.get("/",(req,res) => {
-    res.send("Bem vindo ao meu Projeto!");
+    //res.send("Bem vindo ao meu Projeto!");
+
+    //Não é necessrio passar a rota pois ao usar res.render ele ja olha obrigatóriamente para a pasta views
+    res.render("principal/perfil")
 });
 
 app.listen(porta,()=>{
