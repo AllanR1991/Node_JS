@@ -6,6 +6,7 @@ const porta = 8080;
 
 //Estou dizendo ao express para usar o EJS como view engine
 app.set('view engine','ejs')
+app.use(express.static('public')); //Configurando a aplicação para carregar arquivos staticos, imagem, css.
 
 app.get("/:nome/:lang",(req,res) => {
     //res.send("Bem vindo ao meu Projeto!");
