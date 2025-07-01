@@ -10,8 +10,17 @@ app.set('view engine','ejs')
 app.get("/",(req,res) => {
     //res.send("Bem vindo ao meu Projeto!");
 
+    var nome = "Victor Lima";
+    var lang = "JavaScript";
+
+
     //Não é necessrio passar a rota pois ao usar res.render ele ja olha obrigatóriamente para a pasta views
-    res.render("principal/perfil")
+    res.render("index", {
+        nome,
+        lang,
+        empresa: "Guia do Programador",
+        incritos: 8000
+    })
 });
 
 app.listen(porta,()=>{
