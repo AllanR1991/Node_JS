@@ -16,11 +16,23 @@
     <p>Empresa: <%= empresa %></p>
     <p>Inscritos no canal: <%= incritos %></p>
 
+    <!-- Utilizando IF e ELSE com EJS -->
     <% if (exibeMsg) { %>  
         <h3>Isso é uma mensagem de erro!</h3>
     <% } else { %>
         <h3>Nenhum erro na página</h3>
     <% } %>
+
+
+    <!-- Utilizando for each com EJS -->
+    <ul>
+        <% produtos.forEach(produto => { %>
+            <li><p><%= produto.nome %></p></li>
+            <ul>
+                <li><p>Preço:  <%= produto.preco %></p></li>
+            </ul>
+        <% }) %>
+    </ul>
 
 </body>
 </html>
