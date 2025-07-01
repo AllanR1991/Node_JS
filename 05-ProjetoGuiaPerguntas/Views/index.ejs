@@ -11,9 +11,16 @@
     <h3>Lista de perguntas</h3>
 
 
-    <%= nome %>
-    <%= lang %>
-    <%= empresa %>
-    <%= incritos %>
+    <p>Nome: <%= nome %></p>
+    <p>Linguagem favorita: <%= lang %></p>
+    <p>Empresa: <%= empresa %></p>
+    <p>Inscritos no canal: <%= incritos %></p>
+
+    <% if (exibeMsg) { %>  
+        <h3>Isso é uma mensagem de erro!</h3>
+    <% } else { %>
+        <h3>Nenhum erro na página</h3>
+    <% } %>
+
 </body>
 </html>
