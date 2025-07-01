@@ -7,11 +7,12 @@ const porta = 8080;
 //Estou dizendo ao express para usar o EJS como view engine
 app.set('view engine','ejs')
 
-app.get("/",(req,res) => {
+app.get("/:nome/:lang",(req,res) => {
     //res.send("Bem vindo ao meu Projeto!");
 
-    var nome = "Victor Lima";
-    var lang = "JavaScript";
+
+    var nome = req.params.nome; //Pegando os paramentos informados pelo cliente e atribuido os valores.
+    var lang = req.params.lang;
 
 
     //Não é necessrio passar a rota pois ao usar res.render ele ja olha obrigatóriamente para a pasta views
