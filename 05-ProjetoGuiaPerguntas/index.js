@@ -16,6 +16,21 @@ app.get("/:nome/:lang",(req,res) => {
 
     var exibeMsg = true;
 
+    var produtos = [
+        {
+            nome: "Doritos",
+            preco: 3.14
+        },
+        {
+            nome: "Coca-Cola",
+            preco: 8.99
+        },
+        {
+            nome: "Leite",
+            preco: 5.56
+        },
+    ]
+
 
     //Não é necessrio passar a rota pois ao usar res.render ele ja olha obrigatóriamente para a pasta views
     res.render("index", {
@@ -23,7 +38,8 @@ app.get("/:nome/:lang",(req,res) => {
         lang,
         empresa: "Guia do Programador",
         incritos: 8000,
-        exibeMsg
+        exibeMsg,
+        produtos
     })
 });
 
