@@ -14,13 +14,16 @@ app.get("/:nome/:lang",(req,res) => {
     var nome = req.params.nome; //Pegando os paramentos informados pelo cliente e atribuido os valores.
     var lang = req.params.lang;
 
+    var exibeMsg = true;
+
 
     //Não é necessrio passar a rota pois ao usar res.render ele ja olha obrigatóriamente para a pasta views
     res.render("index", {
         nome,
         lang,
         empresa: "Guia do Programador",
-        incritos: 8000
+        incritos: 8000,
+        exibeMsg
     })
 });
 
