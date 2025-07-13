@@ -13,6 +13,10 @@ app.get("/",(req,res) => {
     res.render("index")
 });
 
+app.get("/perguntar",(req, res)=>{
+    res.render();
+})
+
 app.listen(porta,()=>{
     console.log(`App rodando! http://localhost:${porta}`);
 });
